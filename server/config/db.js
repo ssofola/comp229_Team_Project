@@ -1,4 +1,4 @@
 module.exports=
 {
-    "URI": "mongodb+srv://moneyraheja:4vJQzuU9779E5mZ9@cluster0.ajkufxz.mongodb.net/?retryWrites=true&w=majority"
+    "URI": "mongodb+srv://mraheja:KoimcK4UQ5AaFNYD@cluster1.k8ggkcb.mongodb.net/IncidentManager?retryWrites=true&w=majority"
 }
