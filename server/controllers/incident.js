@@ -85,11 +85,14 @@ module.exports.processEditPage = (req, res, next) => {
 
     let updatedBook = Book({
         "_id": id,
-        "name": req.body.name,
-        "author": req.body.author,
-        "published": req.body.published,
-        "description": req.body.description,
-        "price": req.body.price
+        "incidentID": req.body.incidentID,
+        "incidentNo": req.body.incidentNo,
+        "title": req.body.title,
+        "category": req.body.category,
+        "createdBy": req.body.createdBy,
+        "assignedtTo": req.body.assignedtTo,
+        "status" : req.body.status,
+        "priority" : req.body.priority
     });
 
     Book.updateOne({_id: id}, updatedBook, (err) => {
