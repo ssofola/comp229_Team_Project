@@ -1,0 +1,57 @@
+<!--main nav-->
+<nav class="navbar navbar-expand-lg navbar-warning bg-secondary">
+  <div class="container-fluid">
+    
+    <a class="navbar-brand"  href="/" ><img width="100px" src="/Assets/images/unity.png"></img>Unity Incident Managment
+
+
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+        <% if (title=="Dashboard" ) { %>
+          <li class="nav-item active">
+            <a class="nav-link active" href="/dashboard"><i class="fa-brands fa-servicestack"></i>Dashboard</a>
+            <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard"><i class="fa-brands fa-servicestack"></i>Dashboard</a>
+            <% } %>
+          </li>
+
+          <% if (title=="Incident list" ) { %>
+            <li class="nav-item active">
+              <a class="nav-link active" href="/incident"><i class="fa-solid fa-book"></i>Incident list</a>
+              <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/incident"><i class="fa-solid fa-book"></i></i>Incident list</a>
+              <% } %>
+            </li>
+
+            <% if (title=="Business Contact" ) { %>
+              <li class="nav-item active">
+                <a class="nav-link active" href="#"><i class="fa-solid fa-book"></i>Categories</a>
+                <% } else { %>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-book"></i></i>Categories</a>
+                <% } %>
+              </li>
+
+
+              <% if(typeof displayName=='string' && displayName) { %>
+                <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %>
+                </li>
+                <li class="nav-item"><a href="/logout" class="nav-link">
+                    <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+                <% } else { %>
+                  <li class="nav-item"><a href="#" class="nav-link">
+                      <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+                  <% } %>
+
+    </div>
+  </div>
+</nav>

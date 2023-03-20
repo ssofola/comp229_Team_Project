@@ -1,0 +1,72 @@
+<%- include ('../partials/header') %>
+
+
+<%- include ('../partials/main_nav') %>
+
+
+
+<!-- Main Content -->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-1 col-md-11">
+            <h1><%= title %></h1>
+
+            
+                <a href="/incident/add" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i> Add Incident</a>
+            
+            <br>
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr class="d-flex">
+                    
+                        <th class="text-center col-2">Incident ID</th>
+                        <th class="text-center col-2">Incident Number</th>
+                        <th class="text-center col-1">Title</th>
+                        <th class="col-1">Category</th>
+                        <th class="text-center col-1">Created by</th>
+                        <th class="text-center col-1">Assigned to</th>
+                        <th class="text-center col-1">Status</th>
+                        <th class="text-center col-1">Priority</th>
+                        <th class="text-center col-1">Edit Action</th>
+                        <th class="text-center col-1">Delete Action</th>
+                   
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count < BookList.length; count++) { %>
+                    <tr class="d-flex">
+                        
+                            <td class="text-center col-2"><%= BookList[count].incidentID %></td>
+                            <td class="text-center col-2"><%= BookList[count].incidentNo %></td>
+                            <td class="text-center col-1"><%= BookList[count].title %></td>
+                            <td class="col-1"><%= BookList[count].category %></td>
+                            <td class="text-center col-1"><%= BookList[count].createdBy %></td>   
+                            <td class="text-center col-1"><%= BookList[count].assignedtTo %></td> 
+                            <td class="text-center col-1"><%= BookList[count].status %></td> 
+                            <td class="text-center col-1"><%= BookList[count].priority %></td>         
+                            <td class="text-center col-1">
+                                <a href="/incident/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit</a>
+                            </td>
+                            <td class="text-center col-1">
+                                <a href="/incident/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash-alt"></i> Delete</a>
+                            </td>
+                        
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+  
+
+
+
+
+
+
+    <%- include ('../partials/bottom_nav') %>
+    <%- include ('../partials/footer') %>

@@ -1,0 +1,111 @@
+<%- include ('../partials/header') %>
+
+
+<%- include ('../partials/main_nav') %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="offest-md-2 col-md-8">
+            <h1><%= title%></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="IdTextField">Incident id</label>
+                    <input type="number" class="form-control"
+                    id="nameTextField"
+                    placeholder="Enter the Incident ID"
+                    name="incidentID" 
+                    value="<%= book.incidentID %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="IdnoTextField">Incident Number</label>
+                    <input type="text" class="form-control"
+                    id="authorTextField"
+                    placeholder="Enter the incident number"
+                    name="incidentNo" 
+                    value="<%= book.incidentNo %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="titleTextField">Title</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter Title"
+                    name="title" 
+                    value="<%= book.title %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="categoryTextField">Category</label>
+                    <input type="text" class="form-control"
+                    id="publishedTextField"
+                    placeholder="Enter Title"
+                    name="category" 
+                    value="<%= book.category %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="createdTextField">Created by</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Created by"
+                    name="createdBy" 
+                    value="<%= book.createdBy %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="assignedTextField">Assigned to</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Assigned to"
+                    name="assignedtTo" 
+                    value="<%= book.assignedtTo %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="statusTextField">Status</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Status"
+                    name="status" 
+                    value="<%= book.status %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="priorityTextField">Priorit</label>
+                    <input type="text" class="form-control"
+                    id="priceTextField"
+                    placeholder="Priority "
+                    name="priority"
+                    value="<%= book.priority %>"
+                    required>
+                </div>
+
+
+            
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+
+                    <a href="/incident" class="btn btn-warning">
+                        <i class="fas fa-undo"></i>Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%- include ('../partials/bottom_nav') %>
+<%- include ('../partials/footer') %>

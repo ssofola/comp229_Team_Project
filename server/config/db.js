@@ -1,8 +1,4 @@
-module.exports = {
-    uri:"mongodb+srv://<username>:<password>@cluster1.k8ggkcb.mongodb.net/?retryWrites=true&w=majority",
-    option : {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        family: 4
-    }
-};
+module.exports=
+{
+    "URI": "mongodb+srv://moneyraheja:4vJQzuU9779E5mZ9@cluster0.ajkufxz.mongodb.net/?retryWrites=true&w=majority"
+}
