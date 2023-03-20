@@ -101,7 +101,7 @@ module.exports.processEditPage = (req, res, next) => {
         else
         {
             // refresh the book list
-            res.redirect('/book-list');
+            res.redirect('/incident');
         }
     });
 }
