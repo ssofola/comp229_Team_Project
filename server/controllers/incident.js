@@ -20,7 +20,7 @@ module.exports.displayBookList = (req, res, next) => {
             //console.log(BookList);
 
             res.render('book/list', 
-            {title: 'Incident list', 
+            {title: 'IncidentModel list',
             BookList: bookList, 
             displayName: req.user ? req.user.displayName : ''});      
         }

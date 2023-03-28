@@ -1,0 +1,40 @@
+<section>
+  <div class="container w-75">
+    <!-- Form Heading -->
+    <div class="row">
+      <h3 class="p-1">Create Work Team</h3>
+      <hr/>
+    </div>
+    <!-- Form Content -->
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputID">Record ID</label>
+        <input type="text" class="form-control rounded-0" id="inputID" name="id" readonly/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputWorkTeamName">Name</label>
+        <input type="email" class="form-control rounded-0" id="inputWorkTeamName" name="code" readonly/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3">
+        <label class="form-label" for="inputDescription">Description</label>
+        <textarea type="text" class="form-control rounded-0"
+                  id="inputDescription" name="description" placeholder="Enter the work team's description.." rows="5" ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col float-end">
+        <div class="mb-3 float-end">
+          <button class="btn btn-primary">Save</button>&nbsp;<button class="btn btn-danger" (click)="returnToList()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

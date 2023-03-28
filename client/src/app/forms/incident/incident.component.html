@@ -1,0 +1,96 @@
+<section>
+  <div class="container w-75">
+    <!-- Form Heading -->
+    <div class="row">
+      <h3 class="p-1">Incident Form</h3>
+      <hr/>
+    </div>
+    <!-- Form Content -->
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputIncidentID">Record ID</label>
+        <input type="text" class="form-control rounded-0" id="inputIncidentID" name="id" readonly/>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputIncidentCode">Incident No.</label>
+        <input type="email" class="form-control rounded-0" id="inputIncidentCode" name="code" readonly/>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="inputTitle">Title</label>
+      <input type="text" class="form-control rounded-0" id="inputTitle" name="title" placeholder="Enter the incident title.."/>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="inputDescription">Description</label>
+      <textarea type="text" class="form-control rounded-0" rows="4"
+                id="inputDescription" name="description" placeholder="Enter the incident's description.."></textarea>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputCategory">Category</label>
+        <select id="inputCategory" class="form-select" aria-label="Default select example">
+          <option selected>Select incident category:</option>
+          <option value="1">Electrical</option>
+          <option value="2">Lighting</option>
+          <option value="3">Roadway</option>
+        </select>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputRecorded">Recorded On</label>
+        <input type="email" class="form-control rounded-0" id="inputRecorded" name="code" readonly/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputPriority">Priority</label>
+        <select id="inputPriority" class="form-select" aria-label="Default select example">
+          <option selected>Select incident priority:</option>
+          <option value="1">Low</option>
+          <option value="2">Medium</option>
+          <option value="3">High</option>
+        </select>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputStatus">Status</label>
+        <select id="inputStatus" class="form-select" aria-label="Default select example">
+          <option selected>Select incident status:</option>
+          <option value="1">New</option>
+          <option value="2">In-Progress</option>
+          <option value="3">Completed</option>
+          <option value="4">Escalated</option>
+          <option value="5">Abandoned</option>
+          <option value="6">Closed</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputCreatedBy">Created By</label>
+        <input type="text" class="form-control rounded-0" id="inputCreatedBy" name="created" readonly/>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputAssignedTo">Assigned To</label>
+        <select id="inputAssignedTo" class="form-select" aria-label="Default select example">
+          <option selected>Select Work Team:</option>
+          <option value="1">LIGHTING-TEAM-A</option>
+          <option value="2">LIGHTING-TEAM-B</option>
+          <option value="3">ELECTRICAL-TEAM-A</option>
+          <option value="4">ELECTRICAL-TEAM-b</option>
+          <option value="5">ROAD-WORKS-TEAM-A</option>
+          <option value="6">ROAD-WORKS-TEAM-B</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col float-end">
+        <div class="mb-3 float-end">
+          <button class="btn btn-primary">Save</button>&nbsp;<button class="btn btn-danger" (click)="returnToList()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

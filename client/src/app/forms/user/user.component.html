@@ -1,0 +1,54 @@
+<section>
+  <div class="container w-75">
+    <!-- Form Heading -->
+    <div class="row">
+      <h3 class="p-1">Create User</h3>
+      <hr/>
+    </div>
+    <!-- Form Content -->
+    <div class="mb-3 col-md-12">
+      <label class="form-label" for="inputUserID">User ID</label>
+      <input type="text" class="form-control rounded-0" id="inputUserID" name="id" readonly/>
+    </div>
+    <div class="mb-3 col-md-12">
+      <label class="form-label" for="inputFullName">Full Name</label>
+      <input type="email" class="form-control rounded-0" id="inputFullName" name="code" readonly/>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputUsername">Username </label>
+        <input type="email" class="form-control rounded-0" id="inputUsername" name="code" readonly/>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputPassword">Password</label>
+        <input type="email" class="form-control rounded-0" id="inputPassword" name="code" readonly/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputEmail">Email</label>
+        <input type="email" class="form-control rounded-0" id="inputEmail" name="code" readonly/>
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="inputRole">Role</label>
+        <select id="inputRole" class="form-select" aria-label="Default select example">
+          <option selected>Select Role:</option>
+          <option value="1">Asset Inspector</option>
+          <option value="2">Facility Inspector</option>
+          <option value="3">Manager</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col float-end">
+        <div class="mb-3 float-end">
+          <button class="btn btn-primary">Save</button>&nbsp;<button class="btn btn-danger" (click)="returnToList()" >Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
