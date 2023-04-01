@@ -5,14 +5,15 @@ var router = express.Router();
 
 
 /* GET home page. */
-router.get('/', (req, res, next)=>{
-    res.render('dashboard', {title: 'Dashboard'});
-});
+// router.get('/', (req, res, next)=>{
+//     res.render('dashboard', {title: 'Dashboard'});
+//  });
 
-/* GET home page. */
-router.get('/home', (req, res, next)=>{
-    res.render('dashboard', {title: 'Dashboard'});
-});
+// /* GET home page. */
+// router.get('/home', (req, res, next)=>{
+//     res.render('dashboard', {title: 'Dashboard'});
+// });
+
 
 module.exports = router;
 

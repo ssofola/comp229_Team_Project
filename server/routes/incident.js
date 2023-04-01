@@ -21,19 +21,19 @@ let incidentController = require('../controllers/incident');
 router.get('/', incidentController.displayBookList);
 
 /* GET route for the displaying Add Page - Create Operation */
-router.get('/add', incidentController.displayAddPage);
+router.get('/add',requireAuth, incidentController.displayAddPage);
 
 /* POST route for processing the Add Page - Create Operation */
-router.post('/add', incidentController.processAddPage);
+router.post('/add',requireAuth, incidentController.processAddPage);
 
 /* GET route for the displaying Edit Page - Update Operation */
-router.get('/edit/:id', incidentController.displayEditPage);
+router.get('/edit/:id',requireAuth, incidentController.displayEditPage);
 
 /* Post route for processing the Edit page- Update Operation */
-router.post('/edit/:id', incidentController.processEditPage);
+router.post('/edit/:id',requireAuth, incidentController.processEditPage);
 
 /* GET to perdom the DELETION - Update Operation */
-router.get('/delete/:id', incidentController.performDelete );
+router.get('/delete/:id',requireAuth, incidentController.performDelete );
 
 
 module.exports = router;

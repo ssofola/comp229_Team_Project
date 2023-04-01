@@ -15,7 +15,6 @@ let flash = require('connect-flash');
 
 //database setup
 let mongoose = require('mongoose');
-//let DB = "mongodb://127.0.0.1:27017/book_store"
 
 let DB=require('./db')
 mongoose.set('strictQuery', true);
@@ -81,7 +80,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 //routing requests to the appropriate route.
-app.use('/', dashboardRouter);
+app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/incident',incidentRouter);
 app.use('/dashboard',dashboardRouter);

@@ -8,9 +8,9 @@ let passport = require('passport');
 let userModel = require('../models/user');
 let User = userModel.User;//alias
 
-// module.exports.displayHomePage = (req, res, next)=>{
-//     res.render('index', {title: 'Home',displayName: req.user ? req.user.displayName : ''});
-// }
+ module.exports.displayHomePage = (req, res, next)=>{
+     res.render('dashboard', {title: 'Dashboard',displayName: req.user ? req.user.displayName : ''});
+ }
 
 module.exports.displayAboutPage = (req, res, next)=>{
     res.render('about', {title: 'About',displayName: req.user ? req.user.displayName : ''});
@@ -65,7 +65,7 @@ module.exports.processLoginPage = (req,res,next)=>{
             {
                 return next(err);
             }
-            return res.redirect('/book-list');
+            return res.redirect('/incident');
         })
     })(req, res, next);
 

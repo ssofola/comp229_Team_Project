@@ -5,10 +5,12 @@ var router = express.Router();
 let indexController = require('../controllers/index');
 
 // /* GET home page. */
-// router.get('/', indexController.displayHomePage);
+ router.get('/', indexController.displayHomePage);
 
 // /* GET home page. */
-// router.get('/home', indexController.displayHomePage);
+ router.get('/dashboard', indexController.displayHomePage);
+
+ router.get('/home', indexController.displayHomePage);
 
 /* GET About page. */
 router.get('/about', indexController.displayAboutPage);
